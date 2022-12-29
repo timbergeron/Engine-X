@@ -1,0 +1,18 @@
+Engine 5.50 - April 19, 2012
+Baker
+
+License: The distribution is GPL 3.0; most source codes are GPL 2.0.
+Platforms: Windows, Mac OS X
+
+Special thanks to MH, Spike and R00k.  
+
+MH and Spike always help me with obscure and complex questions, R00k and I have long exchanged ideas back and forth.  
+Engine X incorporates some code written by MH (Direct3D 8.1 wrapper, Windows MP3 support).  
+Engine X is largely based on ProQuake and JoeQuake, with some features from Qrack, FTEQW, DirectQ, Quakespasm,
+FitzQuake, FuhQuake.  The Mac version leverages work by Fruitz of Dojo GLQuake and Woods.
+
+Report improvement ideas, bugs, etc. to the QuakeOne.com forums.  Feature list is there also.
+
+Windows Note: The MSVC6 project will compile.  The Microsoft Visual Studio 2008 project and the CodeBlocks projects
+need some extra source files added to the project to compile.  I don't have MSVC2008 right now.  And was too lazy
+to update the CodeBlocks project.

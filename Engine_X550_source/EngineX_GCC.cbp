@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="EngineX_GCC" />
+		<Option makefile="makefile" />
+		<Option execution_dir="..\" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="Headers\;Audio\;_Base\;Client State\;Common\;Cvars And Commands\;Extensions\;Host Server VM\;Input\;Network\;Rendering\;Renderer\;System\;Video\;User Interface\;" />
+		<Build>
+			<Target title="Release Win32">
+				<Option platforms="Windows;" />
+				<Option output="..\EngineX_GCC" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="..\" />
+				<Option object_output="Release_GCC" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="-static-libgcc" />
+				</Linker>
+			</Target>
+			<Target title="Debug Win32">
+				<Option output="..\EngineX_GCC_Debug" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug_GCC" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add option="-W" />
+					<Add option="-fexceptions" />
+					<Add option="-ggdb" />
+					<Add option="-D_DEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg -lgmon" />
+					<Add option="-static-libgcc" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-O2" />
+			<Add option="-Winline" />
+			<Add option="-Wno-trigraphs" />
+			<Add option="-DCURL_STATICLIB" />
+			<Add option="-DWIN32" />
+			<Add option="-D_WINDOWS" />
+			<Add option="-DGLQUAKE" />
+			<Add option="-DNATIVE_OS" />
+			<Add directory="libcurl\include" />
+			<Add directory="dxsdk\SDK\INC" />
+			<Add directory="libjpeg\includes" />
+		</Compiler>
+		<Linker>
+			<Add library="winmm" />
+			<Add library="wsock32" />
+			<Add library="msvcrt" />
+			<Add library="glu32" />
+			<Add library="opengl32" />
+			<Add library="libcurl\lib\libcurl.lib" />
+			<Add library="dxsdk\SDK\LIB\DINPUT.LIB" />
+			<Add library="dxsdk\SDK\LIB\DXGUID.LIB" />
+			<Add library="libjpeg\lib\libjpeg.lib" />
+			<Add library="msvcrt" />
+		</Linker>
+		<Unit filename="Engine_X_GCC.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="adivtab.h" />
+		<Unit filename="anorm_dots.h" />
+		<Unit filename="anorms.h" />
+		<Unit filename="bspfile.h" />
+		<Unit filename="changelog.txt" />
+		<Unit filename="cl_chase.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Client State\" />
+		</Unit>
+		<Unit filename="cl_demo.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Client State\" />
+		</Unit>
+		<Unit filename="cl_input.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Input\" />
+		</Unit>
+		<Unit filename="cl_main.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Client State\" />
+		</Unit>
+		<Unit filename="cl_parse.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Host Server VM\" />
+		</Unit>
+		<Unit filename="cl_parse_serverinfo.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Host Server VM\" />
+		</Unit>
+		<Unit filename="cl_sbar.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Client State\" />
+		</Unit>
+		<Unit filename="cl_sbar.h" />
+		<Unit filename="cl_screen.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Client State\" />
+		</Unit>
+		<Unit filename="cl_screen.h" />
+		<Unit filename="cl_tent.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Client State\" />
+		</Unit>
+		<Unit filename="cl_updatescreen.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Client State\" />
+		</Unit>
+		<Unit filename="cl_view.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Client State\" />
+		</Unit>
+		<Unit filename="cl_view.h" />
+		<Unit filename="cl_view_blends.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Video\" />
+		</Unit>
+		<Unit filename="client.h" />
+		<Unit filename="cmd.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Cvars And Commands\" />
+		</Unit>
+		<Unit filename="cmd.h" />
+		<Unit filename="com_byteorder.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Common\" />
+		</Unit>
+		<Unit filename="com_messages.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Common\" />
+		</Unit>
+		<Unit filename="com_stringf.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Common\" />
+		</Unit>
+		<Unit filename="common.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Common\" />
+		</Unit>
+		<Unit filename="common.h" />
+		<Unit filename="conproc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="User Interface\" />
+		</Unit>
+		<Unit filename="conproc.h" />
+		<Unit filename="console.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="User Interface\" />
+		</Unit>
+		<Unit filename="console.h" />
+		<Unit filename="crc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Extensions\" />
+		</Unit>
+		<Unit filename="crc.h" />
+		<Unit filename="cvar.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Cvars And Commands\" />
+		</Unit>
+		<Unit filename="cvar.h" />
+		<Unit filename="cvar_extensions.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Cvars And Commands\" />
+		</Unit>
+		<Unit filename="cvar_listings.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Cvars And Commands\" />
+		</Unit>
+		<Unit filename="cvar_registry.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Cvars And Commands\" />
+		</Unit>
+		<Unit filename="cvar_registry.h" />
+		<Unit filename="cvar_set.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Cvars And Commands\" />
+		</Unit>
+		<Unit filename="draw.h" />
+		<Unit filename="dx8_fakegl.h" />
+		<Unit filename="dx8_gl_fakegl.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="dx8_libci.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="engine.h" />
+		<Unit filename="gl_draw.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="gl_local.h" />
+		<Unit filename="gl_mesh.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="gl_model.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="gl_model.h" />
+		<Unit filename="gl_palette_gamma.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Video\" />
+		</Unit>
+		<Unit filename="gl_poly_gamma.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Video\" />
+		</Unit>
+		<Unit filename="gl_refrag.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="gl_rlight.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="gl_rmain.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="gl_rmisc.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="gl_rpart.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="gl_rsurf.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="gl_texture.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="gl_texture.h" />
+		<Unit filename="gl_warp.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="gl_warp_sin.h" />
+		<Unit filename="host.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Host Server VM\" />
+		</Unit>
+		<Unit filename="host_cmd.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Host Server VM\" />
+		</Unit>
+		<Unit filename="image.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Extensions\" />
+		</Unit>
+		<Unit filename="image.h" />
+		<Unit filename="in_win.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Input\" />
+		</Unit>
+		<Unit filename="in_win_directinput.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Input\" />
+		</Unit>
+		<Unit filename="in_win_joystick.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Input\" />
+		</Unit>
+		<Unit filename="in_win_keyboard.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Input\" />
+		</Unit>
+		<Unit filename="in_win_mouse.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Input\" />
+		</Unit>
+		<Unit filename="input.h" />
+		<Unit filename="iplog.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Extensions\" />
+		</Unit>
+		<Unit filename="iplog.h" />
+		<Unit filename="keys.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Input\" />
+		</Unit>
+		<Unit filename="keys.h" />
+		<Unit filename="location.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Extensions\" />
+		</Unit>
+		<Unit filename="location.h" />
+		<Unit filename="mathlib.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Common\" />
+		</Unit>
+		<Unit filename="mathlib.h" />
+		<Unit filename="menu.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="User Interface\" />
+		</Unit>
+		<Unit filename="menu.h" />
+		<Unit filename="model.h" />
+		<Unit filename="modelgen.h" />
+		<Unit filename="movie.h" />
+		<Unit filename="movie_avi.h" />
+		<Unit filename="mp3_com.h" />
+		<Unit filename="mp3_null.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Audio\" />
+		</Unit>
+		<Unit filename="mp3audio.h" />
+		<Unit filename="nehahra.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Extensions\" />
+		</Unit>
+		<Unit filename="nehahra.h" />
+		<Unit filename="net.h" />
+		<Unit filename="net_dgrm.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Network\" />
+		</Unit>
+		<Unit filename="net_dgrm.h" />
+		<Unit filename="net_loop.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Network\" />
+		</Unit>
+		<Unit filename="net_loop.h" />
+		<Unit filename="net_main.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Network\" />
+		</Unit>
+		<Unit filename="net_udp.h" />
+		<Unit filename="net_vcr.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Network\" />
+		</Unit>
+		<Unit filename="net_vcr.h" />
+		<Unit filename="net_win.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Network\" />
+		</Unit>
+		<Unit filename="net_wins.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Network\" />
+		</Unit>
+		<Unit filename="net_wins.h" />
+		<Unit filename="net_wipx.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Network\" />
+		</Unit>
+		<Unit filename="net_wipx.h" />
+		<Unit filename="pr_cmds.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Host Server VM\" />
+		</Unit>
+		<Unit filename="pr_comp.h" />
+		<Unit filename="pr_edict.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Host Server VM\" />
+		</Unit>
+		<Unit filename="pr_exec.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Host Server VM\" />
+		</Unit>
+		<Unit filename="progdefs.h" />
+		<Unit filename="progs.h" />
+		<Unit filename="protocol.h" />
+		<Unit filename="quakedef.h" />
+		<Unit filename="r_part.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Renderer\" />
+		</Unit>
+		<Unit filename="render.h" />
+		<Unit filename="renderer.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Rendering\" />
+		</Unit>
+		<Unit filename="renderer.h" />
+		<Unit filename="renderer_com.h" />
+		<Unit filename="resource.h" />
+		<Unit filename="security.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Extensions\" />
+		</Unit>
+		<Unit filename="security.h" />
+		<Unit filename="server.h" />
+		<Unit filename="snd_dma.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Audio\" />
+		</Unit>
+		<Unit filename="snd_mem.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Audio\" />
+		</Unit>
+		<Unit filename="snd_mix.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Audio\" />
+		</Unit>
+		<Unit filename="snd_win.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Audio\" />
+		</Unit>
+		<Unit filename="sound.h" />
+		<Unit filename="sound_com.h" />
+		<Unit filename="spritegn.h" />
+		<Unit filename="sv_main.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Host Server VM\" />
+		</Unit>
+		<Unit filename="sv_move.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Host Server VM\" />
+		</Unit>
+		<Unit filename="sv_phys.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Host Server VM\" />
+		</Unit>
+		<Unit filename="sv_user.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Host Server VM\" />
+		</Unit>
+		<Unit filename="sv_world.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Host Server VM\" />
+		</Unit>
+		<Unit filename="sv_world.h" />
+		<Unit filename="sys.h" />
+		<Unit filename="sys_win.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="System\" />
+		</Unit>
+		<Unit filename="sys_win_activate.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="System\" />
+		</Unit>
+		<Unit filename="sys_win_clipboard.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="System\" />
+		</Unit>
+		<Unit filename="sys_win_clock.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="System\" />
+		</Unit>
+		<Unit filename="sys_win_interact.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="System\" />
+		</Unit>
+		<Unit filename="sys_win_main.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="System\" />
+		</Unit>
+		<Unit filename="sys_win_messages.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="System\" />
+		</Unit>
+		<Unit filename="sys_win_registry.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="System\" />
+		</Unit>
+		<Unit filename="sys_win_term.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="System\" />
+		</Unit>
+		<Unit filename="sys_win_version.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="System\" />
+		</Unit>
+		<Unit filename="version.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="System\" />
+		</Unit>
+		<Unit filename="version.h" />
+		<Unit filename="vid.h" />
+		<Unit filename="vid_common_gl.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Video\" />
+		</Unit>
+		<Unit filename="vid_gamma.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Video\" />
+		</Unit>
+		<Unit filename="vid_modes.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Video\" />
+		</Unit>
+		<Unit filename="vid_modes_populate.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Video\" />
+		</Unit>
+		<Unit filename="vid_monitor.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Video\" />
+		</Unit>
+		<Unit filename="vid_videomodes_menu.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Video\" />
+		</Unit>
+		<Unit filename="vid_wgl.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Video\" />
+		</Unit>
+		<Unit filename="wad.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Extensions\" />
+		</Unit>
+		<Unit filename="wad.h" />
+		<Unit filename="webdownload.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Extensions\" />
+		</Unit>
+		<Unit filename="webdownload.h" />
+		<Unit filename="winquake.h" />
+		<Unit filename="winquake_net.h" />
+		<Unit filename="winquake_sound.h" />
+		<Unit filename="winquake_video_modes.h" />
+		<Unit filename="zone.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Extensions\" />
+		</Unit>
+		<Unit filename="zone.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
